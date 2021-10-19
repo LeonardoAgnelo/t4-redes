@@ -81,3 +81,4 @@ class Enlace:
                         traceback.print_exc()
                     finally:
                         dados = b''
+                        dadoscompleto = b''
