@@ -65,6 +65,7 @@ class Enlace:
         # apenas pedaços de um quadro, ou um pedaço de quadro seguido de um
         # pedaço de outro, ou vários quadros de uma vez só.
         dados = self.buffer + dados
+        dadoscompleto = b''
                
         if not dados.endswith(b'\xc0'):
             self.buffer = dados
@@ -81,4 +82,3 @@ class Enlace:
                         traceback.print_exc()
                     finally:
                         dados = b''
-                        dadoscompleto = b''
