@@ -72,6 +72,7 @@ class Enlace:
             dadoscompleto = dados.split(b'\xc0')
             self.buffer = b''
             for i in range(len(dadoscompleto)-1):
+                dadoscompleto[i] = dadoscompleto[i].replace(b'\xdb\xdc', b'\xc0').replace(b'\xdb\xdd',b'\xdb')
                 if not dadoscompleto[i] == b'':
                     try:
                         self.callback(dadoscompleto[i])
